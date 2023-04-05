@@ -11,6 +11,8 @@ function About() {
 
 export default About;
 
+
+{/*
 About.getLayout = function PageLayout(page) {
   return (
     <>
@@ -19,3 +21,4 @@ About.getLayout = function PageLayout(page) {
     </>
   );
 };
+*/}
