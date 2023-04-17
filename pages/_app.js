@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/layout.css";
 import "../styles/navbar.css";
 import Footer from "@/components/Footer";
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-    </>
+     
+      </>
   );
 }

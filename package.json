@@ -13,6 +13,18 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.0",
+<<<<<<< HEAD
+    "bootstrap": "^5.2.3",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.12.2",
+    "next": "^13.3.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-elastic-carousel": "^0.11.5",
+    "react-responsive-carousel": "^3.2.23"
+=======
     "@nextui-org/react": "^1.0.0-beta.12",
     "autoprefixer": "^10.4.14",
     "bcryptjs": "^2.4.3",
@@ -29,5 +41,6 @@
   },
   "devDependencies": {
     "mongoose": "^6.10.5"
+>>>>>>> 1941f9c43caf0038889e25ee2e179b43b9903037
   }
 }
