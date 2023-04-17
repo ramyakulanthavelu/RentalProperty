@@ -5,9 +5,9 @@ import Link from "next/link";
 function Navbar() {
   return (
     <div className="layout-navbar">
-      <Image class="img" src={logo} height={40} width={40} alt="Your Company" />
+      <Image className="img" src={logo} height={40} width={40} alt="Your Company" />
       <nav>
-        <ul class="navlinks">
+        <ul className="navlinks">
           <li>
             <Link className="link" href="/">Home</Link>
           </li>
@@ -23,7 +23,7 @@ function Navbar() {
         </ul>
       </nav>
       <a href="#">
-        <button class="signup">Sign Up</button>
+        <button className="signup">Sign Up</button>
       </a>
     </div>
   );
