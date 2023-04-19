@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       return res.status(404).json({ error: "Don't have form data" });
     const { name,address,contact,price } = req.body;
 
-    const checkexisting = await Users.findOne({ name });
+    const checkexisting = await Properties.findOne({ name });
     if (checkexisting)
       return res.status(422).json({ message: "Property Already Exists" });
 
