@@ -1,6 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Image from 'next/image';
 
 function Slide() {
     return (
@@ -12,7 +13,7 @@ function Slide() {
                 className='main-slide'>
                 <div>
                     <img src="/a1.jpg" height="50px" width="100px" />
-                    <label >Welcome to Swipe Right</label>
+                    <label>Welcome to Swipe Right</label>
                 </div>
                 <div>
                     <img src="/a2.jpeg" height="50px" width="200px" />
