@@ -3,7 +3,7 @@ import {
   Card,
   Spacer,
   Button,
-  Text,
+  text,
   Input,
   Row,
   Checkbox,
@@ -20,7 +20,7 @@ export default function Login() {
         css={{ minHeight: '100vh' }}
       >
         <Card css={{ mw: '420px', p: '20px' }} variant="bordered">
-          <Text
+          <text
             size={24}
             weight="bold"
             css={{
@@ -29,9 +29,9 @@ export default function Login() {
             }}
           >
             Login
-          </Text>
+          </text>
           <Input
-            Text="Email"
+            text="Email"
             clearable
             underlined
             fullWidth
@@ -50,7 +50,7 @@ export default function Login() {
             css={{ mb: '6px' }}
           />
           <Row justify="space-between">
-            <Text size={14}>Forgot password?</Text>
+            <text size={14}>Forgot password?</text>
           </Row>
           <Spacer y={1} />
           <Button>Sign in</Button>
