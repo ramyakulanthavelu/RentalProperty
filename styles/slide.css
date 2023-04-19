@@ -1,8 +1,10 @@
 .main-slide{
-    padding-top: 0%;
+    padding-top: 0;
+    justify-content: center;
+    height: 200vh;
   }
-  .carousel .slider-wrapper{
-    width: 50%;
+  .carousel-container{
+    max-width: 750px;
   }
   .carousel .thumb{
     width: 5%;
