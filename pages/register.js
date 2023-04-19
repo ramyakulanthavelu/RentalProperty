@@ -26,10 +26,11 @@ function register() {
       const post = await fetch("http://localhost:3000/api/auth/signup", options)
       const data = await post.json()
       if(post.ok) router.push("http://localhost:3000/login");
-      else console.log('error')
+      else console.log({data})
     } catch {error}{
       console.error('requestfail')
     }
+    
     // const post = await fetch("http://localhost:3000/api/auth/signup", options)
     //   .then((res) => res.json())
     //   .then((data) => {
@@ -61,6 +62,7 @@ function register() {
                 {...formik.getFieldProps("email")}
               />
             </div>
+            <div><span></span></div>
             <div className="input-group">
               <input
                 type="text"
