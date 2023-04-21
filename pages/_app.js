@@ -1,9 +1,8 @@
 import React from "react";
+import "../styles/products.css"
 import "../styles/layout.css";
 import "../styles/navbar.css";
-import "../styles/slide.css";
 import Footer from "@/components/Footer";
-import Slide from "@/components/Slide"
 import Navbar from "@/components/Navbar";
 
 export default function App({ Component, pageProps }) {
@@ -14,7 +13,6 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Slide />
       <Component {...pageProps} />
       <Footer />
       </>
