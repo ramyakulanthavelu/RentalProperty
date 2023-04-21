@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/products.css"
+import "../styles/Slider.css"
 import "../styles/layout.css";
 import "../styles/navbar.css";
 import Footer from "@/components/Footer";
