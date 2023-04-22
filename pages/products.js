@@ -5,6 +5,7 @@ import Image from "next/image";
 
 
 
+
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/properties");
   //console.log({message : res});
