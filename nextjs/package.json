@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "@nextui-org/react": "^1.0.0-beta.12",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
   }
 }

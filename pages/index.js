@@ -6,13 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function index() {
   return (
     <div className="">
-     <>
-
-     
-     
+     <> 
       {/* <Property/> */}
-
-
+      
      <Slider/>
      </>
     </div>

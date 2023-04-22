@@ -5,10 +5,10 @@ import Carousel from 'react-bootstrap/Carousel';
 function Slider() {
   return (
     <div>
+      <div>
       <Container >
-
         <Col>
-          <Carousel>
+          <Carousel fade>
             <Carousel.Item interval={1000}>
               <img
                 className="d-block w-100"
@@ -21,7 +21,7 @@ function Slider() {
                 <p>World's Largest Real Estate Website</p>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={3000}>
+            <Carousel.Item interval={1000}>
               <img
                 className="d-block w-100"
                 src="/c2.jpg"
@@ -48,7 +48,7 @@ function Slider() {
                 </p>
               </Carousel.Caption>
             </Carousel.Item >
-            <Carousel.Item interval={3000}>
+            <Carousel.Item interval={1000}>
               <img
                 className="d-block w-100"
                 src="/c4.jpg"
@@ -62,7 +62,7 @@ function Slider() {
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={1000}>
               <img
                 className="d-block w-100"
                 src="/c5.jpg"
@@ -79,6 +79,7 @@ function Slider() {
         </Col>
 
       </Container>
+      </div>
     </div>
   )
 }
