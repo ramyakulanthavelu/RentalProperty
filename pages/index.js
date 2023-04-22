@@ -1,19 +1,15 @@
 import React from "react";
 import Slider from "@/components/Slider";
-import Property from "@/components/Property";
+import Section from "@/components/Section";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function index() {
-  
   return (
-    <div className="">
-     <> 
-      <Property/>
-      
-     <Slider/>
-     </>
-    </div>
+    <div>Index
+   
+      <Slider />
+      </div>
   );
 }
 

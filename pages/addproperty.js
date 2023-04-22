@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import { useRouter } from "next/router";
+import property__validate from "@/lib/validate";
 
 function registra() {
   //console.log(formik.errors);
@@ -12,6 +13,8 @@ function registra() {
       contact: "",
       price: "",
     },
+
+    validate : property__validate,
 
     onSubmit,
   });
