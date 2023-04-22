@@ -1,6 +1,5 @@
 import React from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Slider from "@/components/Slider";
+import Image from "next/image";
 
 
 
@@ -30,25 +29,21 @@ export const getStaticProps = async () => {
 const products = ({ posts }) => {
   return (
     <>
-      <Slider />
-      <h1 className="text-center text-danger my-5">Book Your Property Now</h1>
-      <div className="container">
-        <div className="row justify-center">
-          {posts.map((post) => (
-            <div className="col-md-3 h-100 m-3">
-              <div className="card">
-                <img src="/img1.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">{post.name}</h5>
-                  <p className="card-text">{post.address}</p>
-                  <a href="#" className="btn btn-primary">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+      <div>
+      <div className="max-w-xs rounded overflow-hidden shadow-lg" style={{ }}>
+        <Image width={400} height={400} className="" src="/img3.jpg" alt="Sunset in the mountains" />
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p className="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
         </div>
+        {/* <div className="px-6 pt-4 pb-2">
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+        </div> */}
+      </div>
       </div>
     </>
   );

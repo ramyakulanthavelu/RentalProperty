@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function Slider() {
   return (
-    <div>
+    <div className='flex flex-auto m-0'>
       <div>
       <Container >
         <Col>
