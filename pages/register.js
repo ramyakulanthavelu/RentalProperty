@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 function register() {
   const router = useRouter();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -22,21 +23,31 @@ function register() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    try{
-      const post = await fetch("http://localhost:3000/api/auth/signup", options)
-      const data = await post.json()
-      if(post.ok) router.push("http://localhost:3000/login");
-      else console.log({data})
-    } catch {error}{
-      console.error('requestfail')
+    try {
+      const post = await fetch(
+        "http://localhost:3000/api/auth/signup",
+        options
+      );
+      const data = await post.json();
+      if (post.ok) router.push("http://localhost:3000/login");
+      else console.log({ data });
+    } catch {
+      error;
     }
-    
+    {
+      console.error("requestfail");
+    }
+
+    return {
+      props: { uexist: data },
+    };
     // const post = await fetch("http://localhost:3000/api/auth/signup", options)
     //   .then((res) => res.json())
     //   .then((data) => {
     //     if (data) router.push("http://localhost:3000/login");
     //   });
   }
+  console.log(onSubmit.data);
 
   return (
     <div className="flex flex-col justify-evenly h-screen bg-blue-200">
@@ -62,7 +73,9 @@ function register() {
                 {...formik.getFieldProps("email")}
               />
             </div>
-            <div><span></span></div>
+            <div>
+              <span></span>
+            </div>
             <div className="input-group">
               <input
                 type="text"
@@ -88,7 +101,8 @@ function register() {
               </button>
             </div>
             <div className="erro">
-              <h1 className="balls"></h1>
+              <h1 className="balls">
+              </h1>
             </div>
           </form>
         </div>
