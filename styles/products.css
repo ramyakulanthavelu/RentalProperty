@@ -1,0 +1,19 @@
+.container{
+position: relative;
+width: 2000px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.card{
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.card:hover {
+    transform: scale(1.15);
+}

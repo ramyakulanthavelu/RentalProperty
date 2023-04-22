@@ -1,17 +1,18 @@
 import React from "react";
-import Kaurosel from "@/components/Kaurosel";
-import Slide from "@/components/Slide";
-import Property from "@/components/Property";
+import Slider from "@/components/Slider";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function index() {
   return (
     <div className="">
      <>
 
      
-     <Kaurosel/>
+     
      <Property/>
 
 
+     <Slider/>
      </>
     </div>
   );
