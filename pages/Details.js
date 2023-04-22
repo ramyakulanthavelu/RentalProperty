@@ -4,7 +4,9 @@ class Details extends React.Component{
 
     state = {
         products:[
-            ""
+            "_id" : "1"
+            "name" :"Karthik",
+
         ]
     }
     render(){
