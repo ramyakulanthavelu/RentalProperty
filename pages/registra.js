@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useRouter } from "next/router";
 
 function registra() {
+  //console.log(formik.errors);
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
@@ -22,41 +23,57 @@ function registra() {
     };
     try {
       const post = await fetch(
-        "http://localhost:3000/api/auth/signup",
+        "http://localhost:3000/api/auth/property",
         options
       );
       const data = await post.json();
       if (post.ok) router.push("http://localhost:3000/login");
-      else console.log("error");
+      else console.log(data);
     } catch {
       error;
     }
     {
       console.error("requestfail");
     }
-
-    //console.log(formik.errors);
-    async function onSubmit(values) {
-      const status = await signIn("credentials", {
-        redirect: false,
-        email: values.email,
-        password: values.password,
-        callbackUrl: "/",
-      });
-
-      if (status.ok) router.push(status.url);
-    }
-
-    return (
-      <div>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Address" />
-          <input type="text" placeholder="Contact" />
-          <input type="text" placeholder="Price" />
-        </form>
-      </div>
-    );
   }
+
+  return (
+    <div className="flex h-screen flex-col justify-center text-center">
+      <form onSubmit={formik.handleSubmit}>
+        <div className="flex-col">
+          <div>
+            <input
+              type="text"
+              placeholder="Name"
+              {...formik.getFieldProps("name")}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Address"
+              {...formik.getFieldProps("address")}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Contact"
+              {...formik.getFieldProps("contact")}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Price"
+              {...formik.getFieldProps("price")}
+            />
+          </div>
+          <button type="submit"> Register</button>
+        </div>
+      </form>
+    </div>
+  );
 }
+
 export default registra;

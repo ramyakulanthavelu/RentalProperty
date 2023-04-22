@@ -1,10 +1,15 @@
 import React from "react";
 import Kaurosel from "@/components/Kaurosel";
+import Slide from "@/components/Slide";
+import Property from "@/components/Property";
 function index() {
   return (
-    <div className="index-main">
+    <div className="">
      <>
+
+     
      <Kaurosel/>
+     <Property/>
 
 
      </>

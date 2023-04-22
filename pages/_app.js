@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Slide />
+      
       <Component {...pageProps} />
       <Footer />
       </>
