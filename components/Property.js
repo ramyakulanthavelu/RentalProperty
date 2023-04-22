@@ -1,7 +1,7 @@
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
-  console.log(res);
+  ///console.log(res);
 
   return {
     props: { data },
@@ -9,8 +9,12 @@ export const getStaticProps = async () => {
 };
 
 const Property = ({ data }) => {
-  return <div>{data.map((proper) => (
-    <li>{proper.name}</li>
-  ))}</div>;
+  return (
+    <div>
+      {data.map((proper) => (
+        <li>{proper.name}</li>
+      ))}
+    </div>
+  );
 };
 export default Property;
