@@ -9,6 +9,7 @@ function index() {
     <div>Index
    
       <Slider />
+      
       </div>
   );
 }

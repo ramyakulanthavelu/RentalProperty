@@ -1,7 +1,6 @@
 * {
   margin: 0;
   z-index: 99;
-
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -35,7 +34,6 @@
   border: 1px solid rgb(0, 93, 180);
 }
 .link {
-  
   transition: all 0.3s ease 0s;
   color: #fff;
   text-decoration: none;
