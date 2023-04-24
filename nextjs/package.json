@@ -9,18 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "@nextui-org/react": "^1.0.0-beta.12",
     "classnames": "^2.3.2",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.8.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
+=======
+>>>>>>> f376d0c08ae30ca598c895953326c1bf5543bd57
     "tailwindcss": "^3.3.1"
   }
 }

@@ -1,14 +1,15 @@
 import React from "react";
-import Kaurosel from "@/components/Kaurosel";
+import Slider from "@/components/Slider";
+import Section from "@/components/Section";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function index() {
   return (
-    <div className="index-main">
-     <>
-     <Kaurosel/>
-
-
-     </>
-    </div>
+    <div>Index
+   
+      <Slider />
+      </div>
   );
 }
 

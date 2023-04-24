@@ -5,26 +5,40 @@ import Link from "next/link";
 function Navbar() {
   return (
     <div className="layout-navbar">
-      <Image className="img" src={logo} height={40} width={40} alt="Your Company" />
+      <Image
+        className="img"
+        src={logo}
+        height={40}
+        width={40}
+        alt="Your Company"
+      />
       <nav>
         <ul className="navlinks">
           <li>
-            <Link className="link" href="/">Home</Link>
+            <Link className="link" href="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link className="link" href="/about">Bout Us</Link>
+            <Link className="link" href="/about">
+              Bout Us
+            </Link>
           </li>
           <li>
-            <Link className="link" href="/products">Products</Link>
+            <Link className="link" href="/products">
+              Products
+            </Link>
           </li>
           <li>
-            <Link className="link" href="/login">Login</Link>
+            <Link className="link" href="/logincss">
+              Login
+            </Link>
           </li>
         </ul>
       </nav>
-      <a href="#">
+      <Link href="/register">
         <button className="signup">Sign Up</button>
-      </a>
+      </Link>
     </div>
   );
 }
