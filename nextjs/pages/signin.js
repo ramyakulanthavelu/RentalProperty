@@ -1,7 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-<main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
-<div className="bg-white rounded-">
-<div>Sign In</div>
-</div>
-</main>
+const signin = () => {
+  return (
+    <form>
+        <h1>Registration</h1>
+      <label htmlFor="fullname">Full name:</label>
+      <input type="text" id="username" name="username" />
+
+      <label htmlFor="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label htmlFor="password">Password:</label>
+      <input type="password" id="password" name="password" />
+
+      <button type="submit">Register</button>
+    </form>
+  )
+}
+
+export default signin
