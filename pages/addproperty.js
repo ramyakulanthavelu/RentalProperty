@@ -12,9 +12,11 @@ function registra() {
       address: "",
       contact: "",
       price: "",
+      description: "",
+      imglink: "",
     },
 
-    validate : property__validate,
+    validate: property__validate,
 
     onSubmit,
   });
@@ -70,6 +72,20 @@ function registra() {
               type="text"
               placeholder="Price"
               {...formik.getFieldProps("price")}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="description"
+              {...formik.getFieldProps("description")}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Imgur Link"
+              {...formik.getFieldProps("imglink")}
             />
           </div>
           <button type="submit"> Register</button>
