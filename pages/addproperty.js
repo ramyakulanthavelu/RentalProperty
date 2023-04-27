@@ -1,9 +1,42 @@
 import React from "react";
-import { useFormik } from "formik";
+import { useState } from "react";
+import { useFormik, props } from "formik";
 import { useRouter } from "next/router";
 import property__validate from "@/lib/validate";
+import axios from "axios";
 
 function registra() {
+  var imgurl = "";
+  const [imageSelected, setImageSelected] = useState("");
+  const uploadImage = async () => {
+    console.log(imageSelected);
+
+    const formData = new FormData();
+    formData.append("file", imageSelected);
+    formData.append("upload_preset", "propimg");
+
+    const data = await fetch(
+      "https://api.cloudinary.com/v1_1/dlfrtz3za/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    ).then((r) => r.json());
+
+    imgurl = data.secure_url;
+    console.log(imgurl);
+    ImageUrl()
+  };
+  const ImageUrl = ()=> {
+    formik.setFieldValue('imglink', imgurl)
+
+  }
+
+
+  // const someFunctionWithLogic = () => {
+  //   // Set the value of the number field here:
+  //   setFieldValue('imglink', imgurl)
+//}
   //console.log(formik.errors);
   const router = useRouter();
   const formik = useFormik({
@@ -16,16 +49,19 @@ function registra() {
       imglink: "",
     },
 
-    validate: property__validate,
+    //validate: property__validate,
 
     onSubmit,
   });
   async function onSubmit(values) {
+    //formik.values.append(imglink, "imgur.com");
+    console.log(imgurl);
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
+
     try {
       const post = await fetch(
         "http://localhost:3000/api/auth/property",
@@ -84,10 +120,23 @@ function registra() {
           <div>
             <input
               type="text"
-              placeholder="Imgur Link"
+              placeholder="Img-url"
+              name="imglink"
+              //value={formikProps.values.imglink} // or whatever the value is
+              
               {...formik.getFieldProps("imglink")}
             />
           </div>
+          <input
+            type="file"
+            onChange={(event) => {
+              setImageSelected(event.target.files[0]);
+            }}
+          />
+          <div>{imgurl}</div>
+          <button type="button" onClick={uploadImage}>
+            Upload
+          </button>
           <button type="submit"> Register</button>
         </div>
       </form>

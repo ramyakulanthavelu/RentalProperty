@@ -22,7 +22,10 @@ const Property = ({ posts }) => {
   return (
     <div>
       {posts.map((post) => (
+        <div>
         <li>{post.name}</li>
+        <img src={post.imglink}></img>
+        </div>
       ))}
     </div>
   );
