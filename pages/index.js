@@ -8,7 +8,7 @@ function index() {
   return (
     <div>Index
    
-      <Slider />
+      {/*<Slider />*/}
       
       </div>
   );
