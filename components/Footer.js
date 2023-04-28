@@ -7,7 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer bg-gray-900'>
       <div className='SocialMedia'>
         <InstagramIcon/>
         <TwitterIcon/>
@@ -15,7 +15,7 @@ function Footer() {
         <LinkedInIcon/>
         <EmailIcon/>
       </div>
-      <p> &copy; 2023 Swipe Right</p>
+      <p className='text-white'> &copy; 2023 Swipe Right</p>
     </div>
   )
 }
