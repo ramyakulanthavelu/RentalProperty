@@ -1,14 +1,12 @@
 import React from "react";
-//import Slider from "@/components/Slider";
+import ReactDOM from 'react-dom/client';
 import Section from "@/components/Section";
-
-//import "bootstrap/dist/css/bootstrap.min.css";
-
+import Swiper from "@/components/karsouel";
 function index() {
   return (
-    <div>Index
-   
-      {/*<Slider />*/}
+    <div>
+
+      <Swiper/>
       
       </div>
   );
