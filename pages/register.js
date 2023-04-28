@@ -50,63 +50,61 @@ function register() {
   console.log(onSubmit.data);
 
   return (
-    <div className="flex flex-col justify-evenly h-screen bg-blue-200">
-      <Head>
-        <title>Register</title>
-      </Head>
+    <div>
+      <div className="bg-gradient-to-r from-sky-500 to-indigo-500 min-h-screen flex flex-col">
+        <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+          <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+            <h1 className="mb-8 text-3xl text-center"> Register</h1>
 
-      <section className="w-3/4 mx-auto flex flex-col gap-10 text-center py-10">
-        <div className="title">
-          <h1 className="text-gray-800 text-4xl font-bold py-4"> Register</h1>
-
-          <form
-            className="flex flex-col gap-5"
-            method="post"
-            action="/login"
-            onSubmit={formik.handleSubmit}
-          >
-            <div className="input-group">
+            <form onSubmit={formik.handleSubmit}>
               <input
                 type="email"
-                name="email"
+                className="block border border-grey-light w-full p-3 rounded mb-4"
+                name="Email"
                 placeholder="Email"
                 {...formik.getFieldProps("email")}
               />
-            </div>
-            <div>
-              <span></span>
-            </div>
-            <div className="input-group">
               <input
-                type="text"
+                type="email"
+                className="block border border-grey-light w-full p-3 rounded mb-4"
                 name="username"
                 placeholder="Username"
                 {...formik.getFieldProps("username")}
               />
-            </div>
-            <div className="input-group">
+
               <input
-                type="text"
-                name="password"
+                type="password"
+                className="block border border-grey-light w-full p-3 rounded mb-4"
+                name="Password"
                 placeholder="password"
                 {...formik.getFieldProps("password")}
               />
-            </div>
-            <div className="input-button">
-              <button type="submit">Register</button>
-            </div>
-            <div className="register">
-              <button>
-                <Link href={"/login"}>Login Instead</Link>
+              <input
+                type="password"
+                className="block border border-grey-light w-full p-3 rounded mb-4"
+                name="Password"
+                placeholder="password"
+                {...formik.getFieldProps("password")}
+              />
+
+              <button
+                type="submit"
+                className="w-full text-center py-3 rounded bg-blue-600 text-white hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 focus:outline-none my-1"
+              >
+                Register
               </button>
+            </form>
+            <div>
+              <p className="w-full text-center py-3 rounded">
+                Already have an account? <br></br>{" "}
+                <Link className=" text-blue-600" href={"/login"}>
+                  Login Instead
+                </Link>
+              </p>
             </div>
-            <div className="erro">
-              <h1 className="balls">
-              </h1>
-            </div>
-          </form>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
