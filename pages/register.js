@@ -89,7 +89,11 @@ function register() {
 
               <button
                 type="submit"
-                className=" transition ease-in-out duration-200 w-full text-center py-3 rounded bg-blue-600 text-white hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 focus:outline-none my-1"
+                className="w-full text-center py-3 rounded  bg-gradient-to-r
+                from-violet-500
+                via-fuchsia-600
+                to-cyan-600
+                background-animate text-white hover:bg-violet-200 focus:outline-none my-1"
               >
                 Register
               </button>
