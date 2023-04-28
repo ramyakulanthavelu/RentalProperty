@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useFormik } from "formik";
 import { useSession, signIn, signOut } from "next-auth/react";
 import login__validate from "@/lib/validate";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 function login() {
-  const router = useRouter()
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -23,63 +23,59 @@ function login() {
       redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/",
+      callbackUrl: "/landing",
     });
 
-    if(status.ok) router.push(status.url)
+    if (status.ok) router.push(status.url);
   }
 
   return (
-    <div className="flex flex-col justify-evenly h-screen bg-blue-200">
-      <Head>
-        <title>Login</title>
-      </Head>
+    <div>
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen flex flex-col">
+        <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+          <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+            <h1 className="mb-8 text-3xl text-center">
+              Login
+            </h1>
+            <form onSubmit={formik.handleSubmit}>
+            <input
+              type="email"
+              className="block border border-grey-light w-full p-3 rounded mb-4"
+              name="Email"
+              placeholder="Email"
+              {...formik.getFieldProps("email")}
+            />
 
-      <section className="w-3/4 mx-auto flex flex-col gap-10 text-center py-10">
-        <div className="title">
-          <h1 className="text-gray-800 text-4xl font-bold py-4"> Login test</h1>
+            <input
+              type="password"
+              className="block border border-grey-light w-full p-3 rounded mb-4"
+              name="Password"
+              placeholder="password"
+              {...formik.getFieldProps("password")}
+            />
 
-          <form className="flex flex-col gap-5" onSubmit={formik.handleSubmit}>
-            <div className="input-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                {...formik.getFieldProps("email")}
-              />
-            </div>
-            {formik.errors.email ? (
-              <span className="text-xs font-sans">{formik.errors.email}</span>
-            ) : (
-              <></>
-            )}
-            <div className="input-group">
-              <input
-                type="text"
-                name="password"
-                placeholder="Password"
-                {...formik.getFieldProps("password")}
-              />
-            </div>
-            {formik.errors.password ? (
-              <span className="text-xs font-sans">
-                {formik.errors.password}
-              </span>
-            ) : (
-              <></>
-            )}
-            <div className="input-button">
-              <button type="submit">LOgin</button>
+            
+
+            <button
+              type="submit"
+              className="w-full text-center py-3 rounded bg-blue-600 text-white hover:bg-blue-600 focus:outline-none my-1"
+            >
+              Login
+            </button>
+            </form>
+            <div>
+              <p className="w-full text-center py-3 rounded">
+                Don't have an account? <br></br>{" "}
+                <Link className=" text-blue-600" href={"/register"}>
+                  Register Here
+                </Link>
+              </p>
             </div>
 
-            <div className="register">
-              <button type="button">
-                <Link href={"/register"}>Register</Link>
-              </button>
-            </div>
-          </form>
+            
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
