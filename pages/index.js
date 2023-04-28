@@ -1,14 +1,12 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 import Section from "@/components/Section";
-import Swiper from "@/components/karsouel";
+
 function index() {
   return (
-    <div>
-
-      <Swiper/>
+    <div className="flex justify-center min-h-screen">
       
-      </div>
+    </div>
   );
 }
 

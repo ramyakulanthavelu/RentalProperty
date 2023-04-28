@@ -4,7 +4,7 @@ import "../styles/layout.css";
 import "../styles/navbar.css";
 import "../styles/section.css";
 import { SessionProvider } from "next-auth/react";
-import '../styles/karsouel.css';
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NavBarv2 from "@/components/NavBarv2";
