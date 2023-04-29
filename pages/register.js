@@ -18,34 +18,35 @@ function register() {
   });
 
   async function onSubmit(values) {
+    console.log(values);
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    try {
-      const post = await fetch(
-        "http://localhost:3000/api/auth/signup",
-        options
-      );
-      const data = await post.json();
-      if (post.ok) router.push("http://localhost:3000/login");
-      else console.log({ data });
-    } catch {
-      error;
-    }
-    {
-      console.error("requestfail");
-    }
+    // try {
+    //   const post = await fetch(
+    //     "http://localhost:3000/api/auth/signup",
+    //     options
+    //   );
+    //   const data = await post.json();
+    //   if (post.ok) router.push("http://localhost:3000/login");
+    //   else console.log({ data });
+    // } catch {
+    //   error;
+    // }
+    // {
+    //   console.error("requestfail");
+    // }
 
-    return {
-      props: { uexist: data },
-    };
-    // const post = await fetch("http://localhost:3000/api/auth/signup", options)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data) router.push("http://localhost:3000/login");
-    //   });
+    // return {
+    //   props: { uexist: data },
+    // };
+    const post = await fetch("http://localhost:3000/api/auth/signup", options)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) router.push("http://localhost:3000/login");
+      });
   }
   console.log(onSubmit.data);
 
@@ -65,7 +66,7 @@ function register() {
                 {...formik.getFieldProps("email")}
               />
               <input
-                type="email"
+                type="text"
                 className="block border border-grey-light w-full p-3 rounded mb-4"
                 name="username"
                 placeholder="Username"
