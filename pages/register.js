@@ -65,7 +65,7 @@ function register() {
                 {...formik.getFieldProps("email")}
               />
               <input
-                type="email"
+                type="text"
                 className="block border border-grey-light w-full p-3 rounded mb-4"
                 name="username"
                 placeholder="Username"
