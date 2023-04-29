@@ -15,6 +15,7 @@ function register() {
     },
 
     onSubmit,
+    
   });
 
   async function onSubmit(values) {
@@ -24,29 +25,29 @@ function register() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    // try {
-    //   const post = await fetch(
-    //     "http://localhost:3000/api/auth/signup",
-    //     options
-    //   );
-    //   const data = await post.json();
-    //   if (post.ok) router.push("http://localhost:3000/login");
-    //   else console.log({ data });
-    // } catch {
-    //   error;
-    // }
-    // {
-    //   console.error("requestfail");
-    // }
+    try {
+      const post = await fetch(
+        "http://localhost:3000/api/auth/signup",
+        options
+      );
+      const data = await post.json();
+      if (post.ok) router.push("http://localhost:3000/login");
+      else console.log({ data });
+    } catch {
+      error;
+    }
+    {
+      console.error("requestfail");
+    }
 
-    // return {
-    //   props: { uexist: data },
-    // };
-    const post = await fetch("http://localhost:3000/api/auth/signup", options)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) router.push("http://localhost:3000/login");
-      });
+    return {
+      props: { uexist: data },
+    };
+    // const post = await fetch("http://localhost:3000/api/auth/signup", options)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data) router.push("http://localhost:3000/login");
+    //   });
   }
   console.log(onSubmit.data);
 
