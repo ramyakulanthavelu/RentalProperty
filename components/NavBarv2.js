@@ -4,14 +4,14 @@ function NavBarv2() {
   return (
     <nav className=" bg-blue-800 border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
+        <a href="" className="flex items-center">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
+            src="/logo.png"
+            className="h-10 mr-3"
+            alt="Swipe Right Logo"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+          <span className=" Josefin Sans self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Swipe Right
           </span>
         </a>
         <button
