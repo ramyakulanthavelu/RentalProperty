@@ -3,6 +3,7 @@ import "../styles/products.css";
 import "../styles/layout.css";
 import "../styles/navbar.css";
 import "../styles/section.css";
+import "../styles/about.css";
 import { SessionProvider } from "next-auth/react";
 
 import Footer from "@/components/Footer";

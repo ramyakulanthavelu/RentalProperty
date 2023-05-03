@@ -42,7 +42,7 @@ function index({ user }) {
 function guest() {
   return <div className="text-xl text-black">Failed to Login</div>;
 }
-
+ 
 function login({ session, handlesignout, user }) {
   return (
     <div className="text-xl text-black">
