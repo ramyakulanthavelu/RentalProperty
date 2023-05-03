@@ -9,8 +9,8 @@ function Footer() {
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-2 ">
         <div className='flex justify-center'>
         <div className='align-content'>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium align-content: space-between">
+            <h2 className="mb-6 text-center text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul className="text-gray-500 text-center dark:text-gray-400 font-medium align-content: space-between">
                 <li className="mb-4" >
                     <a href="#" className=" hover:underline">About</a>
                 </li>
@@ -27,8 +27,8 @@ function Footer() {
         </div>
         </div>
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium align-content: space-between">
+            <h2 className="mb-6 text-center text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <ul className="text-gray-500 text-center dark:text-gray-400 font-medium  align-content: space-between">
                 <li className="mb-4">
                     <a href="#" className="hover:underline">Discord Server</a>
                 </li>

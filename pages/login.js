@@ -23,7 +23,7 @@ function login() {
       redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/landing",
+      callbackUrl: "/landing2",
     });
 
     if (status.ok) router.push(status.url);
