@@ -8,11 +8,8 @@ function produc_ind() {
       <SideNavBar />
       <div className='min-h-screen w-screen flex justify-center'>
         <div className=' flex justify-center'>
-          <div>
+        
 
-
-
-          </div>
         </div>
       </div>
     </div>
