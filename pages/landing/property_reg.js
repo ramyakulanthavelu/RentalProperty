@@ -124,7 +124,7 @@ function Agent() {
             </button>
 
             <div className="text-center text-sm text-grey-dark mt-4">
-              By signing up, you agree to Swipe Right
+              By uploading up, you agree to Swipe Right
               <a
                 className="no-underline border-b border-grey-dark text-grey-dark"
                 href="#"
