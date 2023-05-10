@@ -4,9 +4,8 @@ import Footer from "@/components/Footer";
 import { useSession, signOut, SessionProvider } from "next-auth/react";
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    "http://localhost:3000/api/auth/users?id=karthikeyan.vpani@gmail.com"
-  );
+  const url = "http://localhost:3000/api/auth/users?id=";
+  const res = await fetch(url);
   //console.log({message : res});
   const user = await res.json();
   //console.log(posts);
@@ -42,13 +41,14 @@ function index({ user }) {
 function guest() {
   return <div className="text-xl text-black">Failed to Login</div>;
 }
- 
+
 function login({ session, handlesignout, user }) {
   return (
     <div className="text-xl text-black">
       Logged in Ratface
       <div>
-        <p>{user.username}</p>
+        <p className="text-purple-400">{user.username}</p>
+        <p>{session.user.email}</p>
       </div>
       <div className="flex justify-center">
         <button
