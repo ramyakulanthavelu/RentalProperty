@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ReactDOM from "react-dom/client";
 import Section from "@/components/Section";
 
@@ -170,7 +171,7 @@ function index() {
             <div className="rounded overflow-hidden shadow-lg">
               <img className="w-full" src="/img1.jpg" alt="Mountain" />
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">About</div>
+                <Link href='/about'><div className="font-bold text-xl mb-2 "><p className="hover:scale-20">About</p></div></Link>
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, Nonea! Maiores et perferendis eaque,
@@ -182,7 +183,7 @@ function index() {
             <div className="rounded overflow-hidden shadow-lg">
               <img className="w-full" src="/img2.jpg" alt="River" />
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Products</div>
+              <Link href="/products"><div className="font-bold text-xl mb-2">Products</div></Link>
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, Nonea! Maiores et perferendis eaque,
@@ -193,7 +194,7 @@ function index() {
             <div className="rounded overflow-hidden shadow-lg">
               <img className="w-full" src="/img3.jpg" alt="Forest" />
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Login</div>
+              <Link href="/login"><div className="font-bold text-xl mb-2">Login</div></Link>
                 <p className="text-gray-700 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatibus quia, Nonea! Maiores et perferendis eaque,
@@ -206,7 +207,7 @@ function index() {
 
         {/* stats */}
         <div className="flex flex-col justify-items-center px-10">
-          <div className="mt-4 grid grid-cols-1 gap-4  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-4 grid grid-cols-1 gap-4  sm:grid-cols-2 lg:grid-cols-3">
             <div className="flex items-start rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                 <svg
