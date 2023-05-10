@@ -2,6 +2,9 @@ import React from "react";
 import SideNavBar from "../../components/sidenavbar";
 import Footer from "@/components/Footer";
 import { useSession, signOut, SessionProvider } from "next-auth/react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
 
 // export const getStaticProps = async () => {
 //   const url = "http://localhost:3000/api/auth/users?id=";
@@ -26,8 +29,11 @@ import { useSession, signOut, SessionProvider } from "next-auth/react";
 
 function index({ user }) {
   const { data: session } = useSession();
+  const router = useRouter()
   function handlesignout() {
+
     signOut();
+    
   }
 
   return (
@@ -39,16 +45,16 @@ function index({ user }) {
   );
 }
 function guest() {
-  return <div className="text-xl text-black">Failed to Login</div>;
+  return <div className="text-xl text-black">Click <Link href="/">Here</Link> to return to home page</div>;
 }
 
 function login({ session, handlesignout, user }) {
   return (
     <div className="text-xl text-black">
-      Logged in Ratface
+      
       <div>
         {/* <p className="text-purple-400">{user.username}</p> */}
-        <p>{session.user.email}</p>
+        <p>Welcome {session.user.email}</p>
       </div>
       <div className="flex justify-center">
         <button
