@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 
-const { data: session } = useSession({ required: true });
+//const { data: session } = useSession({ required: true });
 
 export const getStaticProps = async () => {
   //const userid = session;
   const res = await fetch(
-    `http://localhost:3000/api/auth/users?id=${session.user.email}`
+    `http://localhost:3000/api/auth/users?id=karthikeyan.vpani@gmail.com`
   );
   //console.log({message : userid});
   const user = await res.json();

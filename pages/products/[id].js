@@ -49,12 +49,7 @@ const Details = ({ data }) => {
                 {data.name}
               </h1>
               <p className="leading-relaxed">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
+                {data.description}
               </p>
               <div className="flex my-5">
                 <span className="title-font font-medium text-2xl text-gray-900">
