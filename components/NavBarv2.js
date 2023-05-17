@@ -4,7 +4,7 @@ function NavBarv2() {
   return (
     <nav className=" bg-blue-800 border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img
             src="/logo.png"
             className="h-10 mr-3"
