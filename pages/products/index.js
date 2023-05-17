@@ -56,14 +56,7 @@ const products = ({ posts }) => {
         </div>
         
       </div>
-      <div className="flex text-center justify-center">
-          <p className="font-com text-xl font-semibold text-blue-700">
-            All Images are from{" "}
-            <a href="https://unsplash.com" className="text-blue-500">
-              Unsplash.com
-            </a>
-          </p>
-        </div>
+      
     </>
   );
 };

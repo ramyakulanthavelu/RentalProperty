@@ -54,15 +54,11 @@ function login({ session, handlesignout, user }) {
       
       <div>
         {/* <p className="text-purple-400">{user.username}</p> */}
-        <p>Welcome {session.user.email}</p>
+        <h3 className="text-white text-2xl text-center">Welcome </h3>
+        <p className="text-white">{session.user.email}</p>
       </div>
       <div className="flex justify-center">
-        <button
-          onClick={handlesignout}
-          className=" py-5 px-10 bg-blue-200 rounded-md"
-        >
-          Signout
-        </button>
+        
       </div>
     </div>
   );

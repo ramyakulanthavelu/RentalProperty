@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
-function Sidenavbar({children}) {
-  const router = useRouter()
+function Sidenavbar({ children }) {
+  const router = useRouter();
   function handlesignout() {
-
-    signOut();
-    router.push("/login");
+    signOut({
+      callbackUrl: "http://localhost:3000/login",
+    });
   }
   return (
     <div className="flex flex-row">
@@ -78,9 +78,7 @@ function Sidenavbar({children}) {
               </Link>
             </li>
             <li>
-              <div
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
+              <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   aria-hidden="true"
                   className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -94,13 +92,17 @@ function Sidenavbar({children}) {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="flex-1 ml-3 whitespace-nowrap"><button onClick={handlesignout}>Sign Out</button></span>
-                </div>
+                <span className="flex-1 ml-3 whitespace-nowrap">
+                  <button onClick={handlesignout}>Sign Out</button>
+                </span>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-      <div className="min-h-screen w-full bg-blue-600 flex flex-col justify-center items-center">{children}</div>
+      <div className="min-h-screen w-full bg-gradient-to-b from-blue-700 via-blue-800 to-gray-900 flex flex-col justify-center items-center p-10">
+        {children}
+      </div>
     </div>
   );
 }
