@@ -8,7 +8,8 @@ import property__validate from "@/lib/validate";
 import Sidenavbar from "@/components/sidenavbar";
 import { useState } from "react";
 import Image from "next/image";
-
+import {BiCloudUpload} from "react-icons/bi";
+import {BiCheckDouble} from "react-icons/bi";
 
 
 
@@ -18,7 +19,9 @@ function Agent() {
   var imgurl = "";
   const [imageSelected, setImageSelected] = useState("")
   const [imagename, setImagename] = useState("");
+  const [isloading, setIsloading] = useState(false);
   const uploadImage = async () => {
+    setIsloading(true);
     console.log(imageSelected);
     console.log(imagename);
     
@@ -37,6 +40,7 @@ function Agent() {
 
     imgurl = data.secure_url;
     ImageUrl();
+    setIsloading(false);
     
   };
   const ImageUrl = async () => {
@@ -146,25 +150,12 @@ function Agent() {
                     <div className="flex items-center justify-center w-full">
                       <label className="flex flex-col w-full h-32 border-4 border-blue-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
                         <div className="flex flex-col items-center justify-center pt-7">
-                          
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 text-gray-400 group-hover:text-gray-600"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            />
-                          </svg>
+                        {imagename ? <BiCheckDouble className="w-8 h-8 fill-green-700 group-hover:text-gray-600"/>
+                          :<BiCloudUpload className="w-8 h-8 fill-gray-400 group-hover:text-gray-600"/>}
                           
                           
                           
-                          {imagename ? <p className="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
+                          {imagename ? <p className="pt-1 text-sm tracking-wider text-green-700 group-hover:text-gray-600">
                             Uploaded Image Succesfully
                           </p> : <p className="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
                             Attach a file
@@ -195,13 +186,13 @@ function Agent() {
                   />
                   <p></p>
                   <div className="flex justify-center p-2">
-                    <button
+                    {isloading ? <p className="w-full px-4 py-2 text-center text-white bg-blue-500 rounded shadow-xl">Loading ..</p>:<button
                     type="button"
                       className="w-full px-4 py-2 text-white bg-blue-500 rounded shadow-xl"
                       onClick={uploadImage}
                     >
                       Upload
-                    </button>
+                    </button>}
                   </div>
                 </div>
               </div>
