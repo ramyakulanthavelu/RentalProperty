@@ -83,7 +83,7 @@ function Agent() {
         options
       );
       const data = await post.json();
-      if (post.ok) router.push("http://localhost:3000/login");
+      if (post.ok) router.push("http://localhost:3000/landing");
       else console.log(data);
     } catch {
       error;
